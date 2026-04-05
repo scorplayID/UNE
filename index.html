@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIE ENTERNION™</title>
+    <style>
+        /* --- RESET DASAR --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* --- TAMPILAN LOADING SCREEN (6 DETIK) --- */
+        #loading-screen {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .logo-image-loading {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .brand-text-loading {
+            font-size: 20px;
+            font-weight: 600;
+            color: #000000;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        /* --- TAMPILAN HALAMAN UTAMA --- */
+        #main-content {
+            display: none;
+            width: 100%;
+        }
+
+        nav {
+            width: 100%;
+            height: 70px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 1px solid #eeeeee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-logo {
+            font-size: 18px;
+            font-weight: 800;
+            color: #000000;
+            text-transform: uppercase;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- STYLE SEJARAH --- */
+        .history-header {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .history-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: #000000;
+        }
+
+        .history-author {
+            font-size: 13px;
+            font-weight: 300;
+            color: #777777;
+        }
+
+        .history-content {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .mention {
+            font-weight: 800;
+            color: #000;
+        }
+
+        #more-text {
+            display: none;
+        }
+
+        .read-more-btn {
+            color: #8e44ad;
+            cursor: pointer;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        /* --- STYLE ADMIN --- */
+        .admin-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        .admin-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .admin-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .admin-image {
+            width: 100%;
+            aspect-ratio: 9 / 16; 
+            object-fit: cover;
+            border-radius: 15px;
+            background-color: #f5f5f5;
+            display: block;
+        }
+
+        .admin-name {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .member-count {
+            color: #888888;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        /* --- STYLE TOMBOL UNGU --- */
+        .join-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 15px 0;
+            background-color: #8e44ad;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            transition: background 0.3s ease;
+        }
+
+        .join-btn:active {
+            background-color: #7d3c98;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-screen">
+        <img src="1766982437517.png" alt="Logo" class="logo-image-loading">
+        <h1 class="brand-text-loading">UNIE™</h1>
+    </div>
+
+    <div id="main-content">
+        <nav>
+            <div class="nav-logo">UNI ENTERNION™</div>
+        </nav>
+
+        <main class="container">
+            
+            <div class="history-header">
+                <h2 class="history-title">Sejarah union</h2>
+                <span class="history-author">(ditulis oleh scorplay)</span>
+            </div>
+
+            <div class="history-content">
+                <p>
+                    Hi nama saya asli saya M.caesar.F yang mempunyai Scorplay dan Tim unie ini. 
+                    Saya akan menceritakan bagaimana pembentukan tim union ini dan apa alasan saya untuk membentuk tim sendiri..
+                    <span id="dots">...</span>
+                    <span id="more-text">
+                        Pada akhir tahun 2024 saya memiliki ide Untuk membuat tim sendiri, sebelumnya saya menjadi anggota tim Kerang ajaib yang di buat oleh <span class="mention">@bang_oxa</span>, lalu Saya mengajak player Random yaitu <span class="mention">@Daungaming</span> untuk memenuhi syarat sebagai tim union lalu Saya mengajak <span class="mention">@Craftsman</span> <span class="mention">@Alesha</span> lalu saya membentuk grup WhatsApp pada 28 april 2025 dan saya mendaftarkan diri sebagai ketua tim tetapi pendaftaran sebagai ketua tim belum di buka jadi saya mengunggu pengumuman kapan di buka, lalu di akhir april ada masalah ke handphone saya karena masalah layar dan saya berharap data data aman karena semua data penting di sana lalu saya memakai handphone lain untuk tetap berkomunikasi dengan calon anggota tim, dan 1 bulan pun tiba di bulan Juli handphone pun kembali dengan data aman, lalu saya memulai pembentukan tim, mulai dari nama tim dan kesiapan mereka untuk menjadi anggota, nama pertama tim ini adalah Craftmingplay atau di singkat menjadi CMP lalu salah satu dari mereka keluar dan saya takut ada yang keluar lagi dan saya mempromosikan kembali tim CMP lalu di bulan September terdapat anggota baru yaitu <span class="mention">@Alarc</span> dan beberapa bulan kemudian sistem union berubah kita tidak perlu menunggu jadwal pendaftaran sebagai anggota tim, dan saya mengubah nama tim CMP Menjadi UNIE Lalu beberapa bulan kemudan saya mencoba menambah anggota baru dan ada 2 anggota yang berminat dan sampai sekarang mereka masih menjadi anggota tim unie ♥️,
+                        <br><br>
+                        <strong>Lalu apa alasan saya membetuk anggota tim?</strong><br>
+                        Alasan saya membetuk anggota tim adalah untuk saling membantu di uni, agar mereka tidak sendirian untuk melakuan apapun di uni.
+                    </span>
+                </p>
+                <span onclick="readMore()" id="read-btn" class="read-more-btn">Baca banyak</span>
+            </div>
+
+            <h2 class="admin-title">Admin Unie</h2>
+            
+            <div class="admin-grid">
+                <a href="https://uni.prd.h5.uni2play.com/prod/landing/?to=uni://unicc.com/user/detail?uid=E7OCP94" class="admin-card">
+                    <img src="1769152882723.png" alt="Scorplay" class="admin-image">
+                    <p class="admin-name">scorplay (Ketua TM)</p>
+                </a>
+
+                <a href="https://uni.prd.h5.uni2play.com/prod/landing/?to=uni://unicc.com/user/detail?uid=EOHOBV3" class="admin-card">
+                    <img src="1763270656703.jpg" alt="Daungaming" class="admin-image">
+                    <p class="admin-name">Daungaming (wakil ketua TM)</p>
+                </a>
+
+                <a href="https://uni.prd.h5.uni2play.com/prod/landing/?to=uni://unicc.com/user/detail?uid=CRUT4RE" class="admin-card">
+                    <img src="Screenshot_20260327-151952 (2).png" alt="Craftsman" class="admin-image">
+                    <p class="admin-name">Craftsman (operator 1)</p>
+                </a>
+
+                <a href="https://uni.prd.h5.uni2play.com/prod/landing/?to=uni://unicc.com/user/detail?uid=DBC6ZYA" class="admin-card">
+                    <img src="Screenshot_20260327-152135 (2).png" alt="Alaric" class="admin-image">
+                    <p class="admin-name">Alaric (operator 2)</p>
+                </a>
+            </div>
+
+            <p class="member-count">6/50 anggota</p>
+
+            <a href="https://uni.prd.h5.uni2play.com/prod/landing/?to=uni://unicc.com/user/detail?uid=E7OCP94" class="join-btn">Gabung ke team</a>
+
+        </main>
+    </div>
+
+    <script>
+        // Loading logic
+        setTimeout(function() {
+            const loader = document.getElementById('loading-screen');
+            const content = document.getElementById('main-content');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+                content.style.display = 'block';
+            }, 500);
+        }, 6000);
+
+        // Read More logic
+        function readMore() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more-text");
+            var btnText = document.getElementById("read-btn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Baca banyak"; 
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Tutup"; 
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+
+</body>
+</html>
